@@ -5,6 +5,7 @@ namespace OSP;
 
 use Exception;
 use OSP\Services\deferScripts;
+use OSP\Services\removeScripts;
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -12,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 final class App
 {
-    private static self $instance;
+    private static $instance;
     private array $services;
 
     /**
@@ -41,7 +42,7 @@ final class App
      * Service instance
      * @return App|static
      */
-    public static function instance(): App {
+    public static function instance() {
         if( self::$instance === null ) {
             self::$instance = new App;
         }
@@ -56,7 +57,7 @@ final class App
     private function loadServices(): void {
         $this->services = [
             deferScripts::class => new deferScripts(),
-            'deferMaps' => '',
+            removeScripts::class => new removeScripts(),
         ];
     }
 
