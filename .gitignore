@@ -1,0 +1,40 @@
+## Global
+# System
+Thumbs.db
+.DS_Store
+.metadata
+
+# Common
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.dll
+*.lib
+*.sbr
+*.ini
+*backup*
+*.sql
+
+# NodeJS
+node_modules
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+*.sublime-settings
+
+# PhpStorm
+.idea
